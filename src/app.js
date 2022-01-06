@@ -38,14 +38,14 @@ app.use(express.static(publicDirectory));
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather App",
-    name: "Andrew Mead",
+    name: "Antonio Spathis",
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "about page",
-    name: "Andrew Mead",
+    name: "Antonio Spathis",
   });
 });
 
@@ -53,14 +53,14 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help page",
     helpText: "Please HELP this is too much",
-    name: "created by Andrew Mead",
+    name: "created by Antonio Spathis",
   });
 });
 
 app.get("/help/*", (req, res) => {
   res.render("404", {
     title: "404",
-    name: "Andrew Mead",
+    name: "Antonio Spathis",
     errorMessage: "HELP ARTICLE not found coming from app.js",
   });
 });

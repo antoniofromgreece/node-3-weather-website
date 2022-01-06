@@ -25,10 +25,12 @@ const forecast = (latitude, longitude, callback) => {
     } else if (body.error) {
       callback("Cant find this location you are after!", undefined);
     } else {
+      console.log(body.current);
       callback(
         undefined,
         `
         You are in ${body.location.region}\n
+        it's ${body.current.weather_descriptions[0]}\n
         and the temperture is ${body.current.temperature} degrees celcius and the\n
         winds are ${body.current.wind_speed} kmh\n
         coming from ${body.current.wind_dir}
